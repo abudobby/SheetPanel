@@ -6,11 +6,26 @@ Bottom Sheet Panel Reusable Component
 
 Download the project and drag the SheetPanel framework into your workspace
 
-```bash
-pip install foobar
+## Usage
+
+```swift
+import SheetPanel
+
+let sheetVC = SheetPanelViewController()
+
+....
+override func viewDidLoad() {
+        super.viewDidLoad()   
+        sheetVC.titleLabel.text = "Title"
+        sheetVC.subtitleLabel.text = "Subtitile"
+        sheetVC.addPanel(toParent: self)
+        sheetVC.set(contentViewController: ContentViewController())
+        
+         }
 ```
 
-## Usage
+
+## Features
 
 ```swift
 import SheetPanel
