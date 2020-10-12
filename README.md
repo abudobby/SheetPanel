@@ -41,6 +41,8 @@ SheetPanelViewController is a drop in Bottom Sheet view that is configurable. In
 ### Title and Subtitle ###
 ```swift
 public var titleLabel: UILabel
+public var subtitleLabel: UILabel
+
 ```
 Configure the title and subtitle once you instantiate the controller. 
 
