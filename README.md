@@ -47,6 +47,8 @@ Configure the title and subtitle once you instantiate the controller.
 ### Layout ###
 ```swift
 public var layout: Layout
+
+sheetVC.layout = Layout(withPositions: [.dismissed, .collapsed, .expanded])
 ```
 Every sheet requries a layout to configure the states. A default layout is created if none is provided. Use this to configure the various scroll positions of SheetPanelViewController. 
 
@@ -55,8 +57,16 @@ Every sheet requries a layout to configure the states. A default layout is creat
 ```swift
 public enum SheetPosition : Double
 ```
-* ```swift .dismissed ```
+* ```.dismissed ```
  Sheet not active on screen
+ 
+ * ```.collapsed ```
+ Sheet is at a third of the screen from the bottom
+ 
+ * ```.expanded ```
+ Sheet is expanded to 90% of the screen from the bottom
+ 
+ You can have all of these states in any order you desire. 
      
   
 
@@ -65,7 +75,7 @@ public enum SheetPosition : Double
 
 
 
-## API
+## API Methods
 
 ### Set content ###
 ```swift
