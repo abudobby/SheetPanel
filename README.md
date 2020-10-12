@@ -6,6 +6,10 @@ Bottom Sheet Panel Reusable Component
 
 Download the project and drag the SheetPanel framework into your workspace
 
+[create an anchor](#Features)
+
+
+
 ## Usage
 
 ```swift
