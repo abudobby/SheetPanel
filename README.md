@@ -1,13 +1,10 @@
 # SheetPanel
-Bottom Sheet Panel Reusable Component
+Reusable Bottom Sheet Panel Component
 
 
 ## Getting Started
 
-Download the project and drag the SheetPanel framework into your workspace
-
-[create an anchor](#Features)
-
+Download the project and drag the SheetPanel framework into your workspace. Try out the sample app to play around with some of the configurations. 
 
 
 ## Usage
@@ -36,7 +33,7 @@ override func viewDidLoad() {
 ```
 ## Configure
 
-SheetPanelViewController is a drop in Bottom Sheet view that is configurable. Instantiate the controller and a few lines of code and your are up and running. 
+SheetPanelViewController is a drop in Bottom Sheet view that is configurable. Instantiate the controller and a few lines of code later, you are up and running :) 
 
 ### Title and Subtitle ###
 ```swift
@@ -124,10 +121,14 @@ Called everytime the sheet is opened for the first time.
 ```swift
   func SheetViewPanel(didChangeTo position: SheetPosition)
 ```
-
 Called everytime the sheet changes position return the current position
 
+## Testing
+I built this component with simplicity in mind. By having the sheet be configured via a layout model, it allows for better testing. To expand on this idea, many of the methods inside the main controller can be refactored into a model to make testing easier. Given more time, I'd probably also use Apples new Combine Framework to keep track of the states to make the component more asynchronous in nature. 
 
+## Future Enhancements
+So far the beauty of this component is the simplicity of having the standard positions states. A future enhnacement to further configure this would be to allow the developer to choose custom positions for the sheet not provided by current API. Another big step would be to confiure the sheet to act like any viewcontroller--ALlow for pushes to another controller for more information while still maintating current position. Moreover, tapping into UIPresentationController API to create a smooth modal transitions between views while keeping Sheet design intact (Doordash's ordering view). 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Cross-Platform Usability
+This component primarly should be used on mobile. The main reason behind the deisgn in my oppinion is to allow for my content without forcing the user to switch between many different views. If there is more screen real estate such as on tablets and computers, a side panel next to main content would probably be a compareable design to mimic the same interacton.   
+
