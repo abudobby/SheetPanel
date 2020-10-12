@@ -37,6 +37,17 @@ override func viewDidLoad() {
 ```
 Sets the view controller responsible for the content portion of a sheet.
 
+### Add Panel ###
+```swift
+public func addPanel(toParent parent: UIViewController) 
+```
+Adds the view managed by the sheet controller as a child of the specified view controller.
+
+### Open Sheet ###
+```swift
+public func openSheet()
+```
+Opens SheetPanelViewController to the inital set position
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
