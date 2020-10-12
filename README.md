@@ -25,9 +25,45 @@ override func viewDidLoad() {
         sheetVC.layout = Layout(withPositions: [.dismissed, .collapsed, .expanded])
         sheetVC.addPanel(toParent: self)
         sheetVC.set(contentViewController: ContentViewController())
-        
          }
+         
+  override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        sheetVC.openSheet()
+
+    }
 ```
+## Configure
+
+SheetPanelViewController is a drop in Bottom Sheet view that is configurable. Instantiate the controller and a few lines of code and your are up and running. 
+
+### Title and Subtitle ###
+```swift
+public var titleLabel: UILabel
+```
+Configure the title and subtitle once you instantiate the controller. 
+
+### Layout ###
+```swift
+public var layout: Layout
+```
+Every sheet requries a layout to configure the states. A default layout is created if none is provided. Use this to configure the various scroll positions of SheetPanelViewController. 
+
+
+### Sheet Position States ###
+```swift
+public enum SheetPosition : Double
+```
+* ```swift
+public enum SheetPosition : Double
+```
+Sheet not active on screen
+  
+
+
+
+
 
 
 ## API
