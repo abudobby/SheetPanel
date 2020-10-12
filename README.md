@@ -31,7 +31,7 @@ override func viewDidLoad() {
 
 ## API
 
-Markup :  ## Heading 2 ##
+## Heading 2 ##
 ```swift
 import SheetPanel
 
