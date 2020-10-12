@@ -55,10 +55,9 @@ Every sheet requries a layout to configure the states. A default layout is creat
 ```swift
 public enum SheetPosition : Double
 ```
-* ```swift
-public enum SheetPosition : Double
-```
-Sheet not active on screen
+* ```swift .dismissed ```
+ Sheet not active on screen
+     
   
 
 
