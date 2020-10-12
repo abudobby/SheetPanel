@@ -2,9 +2,9 @@
 Bottom Sheet Panel Reusable Component
 
 
-## Installation
+## Getting Started
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Download the project and drag the SheetPanel framework into your workspace
 
 ```bash
 pip install foobar
@@ -12,12 +12,20 @@ pip install foobar
 
 ## Usage
 
-```python
-import foobar
+```swift
+import SheetPanel
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+let sheetVC = SheetPanelViewController()
+
+....
+override func viewDidLoad() {
+        super.viewDidLoad()   
+        sheetVC.titleLabel.text = "Title"
+        sheetVC.subtitleLabel.text = "Subtitile"
+        sheetVC.addPanel(toParent: self)
+        sheetVC.set(contentViewController: ContentViewController())
+        
+         }
 ```
 
 ## Contributing
