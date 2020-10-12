@@ -83,7 +83,7 @@ public enum SheetPosition : Double
 ```swift
  public func set(contentViewController: UIViewController)
 ```
-Sets the view controller responsible for the content portion of a sheet.
+Sets the view controller responsible for the content portion of a sheet. Attach any viewcontroller to this to show your content in the sheet.
 
 ### Add Panel ###
 ```swift
