@@ -103,10 +103,31 @@ public func move(to position: SheetPosition, animated: Bool = true)
 ```
 Moves SheetPanelViewController to a specific position in parentViewController with animation.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Delegates
 
-Please make sure to update tests as appropriate.
+```swift
+public protocol SheetPanelDelegate: AnyObject {
+  
+    func SheetViewPanel(didOpen atPosition: SheetPosition)
+  
+    func SheetViewPanel(didChangeTo position: SheetPosition)
+}
+
+```
+### Did Open Sheet to initial position ###
+```swift
+  func SheetViewPanel(didOpen atPosition: SheetPosition)
+```
+Called everytime the sheet is opened for the first time. 
+
+### Sheet did change position ###
+```swift
+  func SheetViewPanel(didChangeTo position: SheetPosition)
+```
+
+Called everytime the sheet changes position return the current position
+
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
