@@ -31,22 +31,12 @@ override func viewDidLoad() {
 
 ## API
 
-### Heading 3 ###
+### Set content ###
 ```swift
-import SheetPanel
-
-let sheetVC = SheetPanelViewController()
-
-....
-override func viewDidLoad() {
-        super.viewDidLoad()   
-        sheetVC.titleLabel.text = "Title"
-        sheetVC.subtitleLabel.text = "Subtitile"
-        sheetVC.addPanel(toParent: self)
-        sheetVC.set(contentViewController: ContentViewController())
-        
-         }
+ public func set(contentViewController: UIViewController)
 ```
+Sets the view controller responsible for the content portion of a sheet.
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
